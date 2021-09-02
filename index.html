@@ -45,6 +45,9 @@
         <section class="scene4">
             <div class="box green mv09">物件9</div>
         </section>
+         <section class="scene5">
+            <div class="box green mv10">物件10</div>
+        </section>
 
 
 
@@ -146,7 +149,16 @@
           function bgcolor(){
             console.log('jq ok');
             $('.scene4').css('background-color' , 'yellow'); 
-          }   
+          } 
+
+          // 場景5  
+
+          gsap.to('.mv10' , {
+            duration : 1,
+             x: 500,
+             y: 100,
+             ease: "back.out(3)"
+          })
 
 
 
