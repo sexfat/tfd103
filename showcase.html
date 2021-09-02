@@ -31,20 +31,37 @@
        </nav>
    </div>
  <script>
+
+    
    
    var tl = gsap.timeline({
-      paused : false
+      paused : true,
    })
+   
+   let open = document.querySelector('.bar');
+   let close = document.querySelector('.close_bar');
+
    
    tl.to('nav' , {right : 0})
      .to('nav' , {height: '100vh'})
+     .to('.close_bar' , {
+        opacity: 1,
+     })
      .to('nav ul li' , {
         opacity : 1,
         stagger : .3
-     }).to('.close_bar' , {
-        opacity: 1,
-        delay : -.7
-     })
+     });
+
+    open.addEventListener('click' , function(){
+      // 播放時 速度正常
+       tl.play().timeScale(1);
+    })
+    close.addEventListener('click' , function(){
+       // 反轉時 順序要相反  速度加快
+        tl.timeScale(3).reverse()
+    })
+
+
  
  </script>
     
