@@ -21,7 +21,9 @@
  <section class="s2">
     <div class="box green mv1">mv01</div>
  </section>
- <section class="s3"></section>
+ <section class="s3">
+    <div class="box green mv2">mv02</div>
+ </section>
  <section class="s4"></section>
 
   <script>
@@ -36,16 +38,38 @@
        // 物件
          trigger : '.mv1',
        // 參考觸發點標線  
-         markers: true,
+         //markers: true,
          // 物件的觸發點 / 瀏覽器的觸發點
          start : 'top center',
         // 物件的結束點 / 瀏覽器的結束點
-        end : '+=2s00 200px',
+        end : '+=200 200px',
          // onEnter onLeave onEnterBack 結束點返回 onLeaveBack 進入點返回 
          toggleActions :'restart none none none',
          scrub : true
        }
     })
+
+    var tl =  gsap.timeline({
+        scrollTrigger: {
+           trigger: '.mv2',
+           //markers : true,
+           start : 'top center',
+           scrub : true
+        
+        }
+    });
+
+    tl.to('.mv2' , {
+       x: 100,
+       rotation : 360
+    }).to('.mv2' ,{
+        y: 200,
+        backgroundColor: '#f20',
+    }).to('.mv2' ,{
+        x: 300,
+        scale : 2
+    })
+
   
   
   
