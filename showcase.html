@@ -30,7 +30,23 @@
            </ul>
        </nav>
    </div>
-
+ <script>
+   
+   var tl = gsap.timeline({
+      paused : false
+   })
+   
+   tl.to('nav' , {right : 0})
+     .to('nav' , {height: '100vh'})
+     .to('nav ul li' , {
+        opacity : 1,
+        stagger : .3
+     }).to('.close_bar' , {
+        opacity: 1,
+        delay : -.7
+     })
+ 
+ </script>
     
 </body>
 </html>
