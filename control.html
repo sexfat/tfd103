@@ -93,17 +93,16 @@
       x: -80
      }) 
    
-    var menu =  gsap.timeline({
-       paused : true
-    })  
+    // var menu =  gsap.timeline({
+    //     paused : true
+    // })  
     
-    
-    gsap.to('.nav' , {
-       x: 100,
+    var menu =  gsap.to('.nav' , {
+       x: 40,
        duration: 1
      });
  
-     menu.reverse(true);
+     menu.reversed(true);
 
      document.getElementById('menu').addEventListener('click' , function(){
        if(menu.reversed()){
