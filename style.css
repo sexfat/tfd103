@@ -42,3 +42,17 @@ section:nth-child(odd) {
   text-align: center;
 
 }
+
+
+.btn {
+  padding: 3px 10px;
+  background-color: #62b6ff;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  transition: .3s all ease;
+}
+.btn:hover {
+  background-color: #0086fb;
+}
