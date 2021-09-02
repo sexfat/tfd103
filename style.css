@@ -69,8 +69,6 @@ ul , li{
   background-color: rgb(232, 232, 232);
   width: 80px;
   text-align: center;
-  position: relative;
-  left: -80px;
 }
 
 .nav li {
