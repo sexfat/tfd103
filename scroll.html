@@ -16,13 +16,43 @@
 
 <body>
  <section class="s1">
+    <h2>Scrolltrigger</h2>
  </section>
  <section class="s2">
-    <div class="box green">mv01</div>
+    <div class="box green mv1">mv01</div>
  </section>
  <section class="s3"></section>
  <section class="s4"></section>
 
+  <script>
+    console.log('trigger start');
+
+    gsap.to('.mv1' ,{
+       x : 400,
+       rotation : 360,
+       duration: 3,
+       //觸發事件
+       scrollTrigger: {
+       // 物件
+         trigger : '.mv1',
+       // 參考觸發點標線  
+         markers: true,
+         // 物件的觸發點 / 瀏覽器的觸發點
+         start : 'top center',
+        // 物件的結束點 / 瀏覽器的結束點
+        end : '+=2s00 200px',
+         // onEnter onLeave onEnterBack 結束點返回 onLeaveBack 進入點返回 
+         toggleActions :'restart none none none',
+         scrub : true
+       }
+    })
+  
+  
+  
+  </script>
+
 </body>
+
+
 
 </html>
