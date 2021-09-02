@@ -46,7 +46,14 @@
             <div class="box green mv09">物件9</div>
         </section>
          <section class="scene5">
-            <div class="box green mv10">物件10</div>
+            <div class="box green mv10">
+               物件10
+            </div>
+             <div class="box green mv11">
+               旋轉物件
+            </div>
+</div>
+
         </section>
 
 
@@ -154,11 +161,22 @@
           // 場景5  
 
           gsap.to('.mv10' , {
-            duration : 1,
-             x: 500,
+            duration : 1.5,
+             x: 100,
              y: 100,
-             ease: "back.out(3)"
+             // ease: "back.out(3)"
+            // ease : "elastic.out(1)"
+            ease : "steps(3)"
           })
+
+
+    gsap.to('.mv11' , {
+    duration : 1,
+      rotation : 360,
+      repeat: -1,
+      ease : "none" // 旋轉時要注意
+    })
+
 
 
 

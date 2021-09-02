@@ -36,3 +36,9 @@ section:nth-child(odd) {
  background-color: rgb(196, 77, 255);
 
 }
+
+.mv11 {
+  border-radius:50%;
+  text-align: center;
+
+}
