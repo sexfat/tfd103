@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +9,43 @@
     <link rel="stylesheet" href="style.css">
     <!-- gsap js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
- 
+
     <title>gsap 基本</title>
 </head>
+
 <body>
-<div class="wrapper">
-    <section>
-     <div class="box green">
-        物件
-     </div>
-  
-  
-  
-    </section>
-    
+    <div class="wrapper">
+        <section>
+            <div class="box green mv01">
+                物件
+            </div>
+             <div class="box green mv02">
+                物件2
+            </div>
+             <div class="box green mv03">
+                物件3
+            </div>
+        </section>
 
 
-</div>
- 
+
+    </div>
+
 
     <script>
-     console.log('start');
+        console.log('start');
+        // 1.   建立gsap 物件
+        gsap.to('.mv01' , { x: 300  , y : 100});
+        gsap.from('.mv02' , { x: 300});
+        gsap.fromTo('.mv03' , { x: 300} , { x : 600});
+   
+        //
+
+
+
 
 
     </script>
 </body>
+
 </html>
