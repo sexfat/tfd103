@@ -44,13 +44,13 @@
    
    tl.to('nav' , {right : 0})
      .to('nav' , {height: '100vh'})
-     .to('.close_bar' , {
-        opacity: 1,
-     })
      .to('nav ul li' , {
         opacity : 1,
         stagger : .3
-     });
+     }).to('.close_bar' , {
+        opacity: 1,
+        delay : -1.5
+     })
 
     open.addEventListener('click' , function(){
       // 播放時 速度正常
