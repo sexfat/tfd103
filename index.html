@@ -44,10 +44,41 @@
         gsap.to('.mv01' , { x: 300  , y : 100});
         gsap.from('.mv02' , { x: 300});
         gsap.fromTo('.mv03' , { x: 300} , { x : 600});
-        gsap.set('.mv04' , { x: 300 , y : 400});
+        gsap.set('.mv04' , { x: 300 , y : 200});
    
-        //
+        // 第二場景  介紹方法裡的屬性
+        
+        gsap.to('.mv05' , {
+          //位移
+          x: 400,
+          // 時間
+          duration : 4,
+          //重複
+        //   repeat : 1,
+         // 無限重複
+          repeat : -1,
+          // yoyo
+          yoyo : true,
+          // 重複延遲
+          repeatDelay : 1,
+          // 延遲
 
+          delay : 1,
+          // 旋轉 xy 
+          rotation : 360,
+          // 旋轉 x 
+          //rotationX : 360
+          // 旋轉 y 
+          // rotationY : 360
+          ///transformOrigin : 'right top', //定位點
+          // 縮放
+          // scale : .5
+          //scaleX : 2,
+          scaleY : 2,
+          // 透明度
+          //opacity : 0,
+          // autoAlpha : 0         
+        })
 
 
 
