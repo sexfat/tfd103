@@ -25,6 +25,12 @@
              <div class="box green mv03">
                 物件3
             </div>
+              <div class="box green mv04">
+                物件4
+            </div>
+        </section>
+        <section class="scene2">
+           <div class="box green mv05">物件5</div>
         </section>
 
 
@@ -38,6 +44,7 @@
         gsap.to('.mv01' , { x: 300  , y : 100});
         gsap.from('.mv02' , { x: 300});
         gsap.fromTo('.mv03' , { x: 300} , { x : 600});
+        gsap.set('.mv04' , { x: 300 , y : 400});
    
         //
 
