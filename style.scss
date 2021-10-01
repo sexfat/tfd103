@@ -147,7 +147,7 @@ $vaule : 21;
 //迴圈
 
 
-@mixin push($num , $dir) {
+@mixin push($num, $dir) {
     @for $i from 1 through $num {
         .push-#{$dir}#{$i} {
             position: relative;
@@ -156,5 +156,19 @@ $vaule : 21;
     }
 }
 
-@include push(200 , left);
-@include push(200 , top);
+// @include push(200, left);
+// @include push(200, top);
+
+
+
+$img : a1 a2 a3 b1 b2 b3 c1 c2 c3; // list
+
+@each $v in $img {
+    .bg-#{$v} {
+        background-image: url('./images/#{$v}.jpg');
+        @include rect (100% , 150px);
+        background-repeat: none;
+        background-size: cover;
+
+    }
+}
