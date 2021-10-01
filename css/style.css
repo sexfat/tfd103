@@ -1,5 +1,38 @@
 @charset "UTF-8";
 /* css 註解 */
+.container .logo {
+  width: 120px;
+  height: 30px;
+}
+
+.container nav .menu {
+  list-style: none;
+}
+
+.container nav .menu li {
+  background-color: #c4c4c4;
+  padding: 10px;
+  width: 150px;
+}
+
+.container nav .menu li:hover {
+  background-color: #ff8585;
+}
+
+.container nav .menu li::before {
+  content: 'before';
+  margin-right: 10px;
+}
+
+.container nav .menu li::after {
+  content: 'after';
+  color: #1780ff;
+}
+
+.about_wrapper {
+  width: 1200px;
+}
+
 body {
   margin: 10px 10px 10px 2px;
   padding: 10px;
@@ -38,39 +71,6 @@ h1 {
   max-width: 200px;
   font: 0.5;
   margin: 6;
-}
-
-.container .logo {
-  width: 120px;
-  height: 30px;
-}
-
-.container nav .menu {
-  list-style: none;
-}
-
-.container nav .menu li {
-  background-color: #c4c4c4;
-  padding: 10px;
-  width: 150px;
-}
-
-.container nav .menu li:hover {
-  background-color: #ff8585;
-}
-
-.container nav .menu li::before {
-  content: 'before';
-  margin-right: 10px;
-}
-
-.container nav .menu li::after {
-  content: 'after';
-  color: #1780ff;
-}
-
-.about_wrapper {
-  width: 1200px;
 }
 
 .btn-w {

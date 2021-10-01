@@ -1,6 +1,15 @@
 /* css 註解 */
+// var
+@import 'base/var';
 
-@import 'var';
+// mixin
+@import 'mixin/mixins';
+
+// layout
+@import 'layout/index';
+@import 'layout/about';
+
+
 
 body {
     margin: $margin;
@@ -84,35 +93,13 @@ $vaule : 21;
 //    padding: 0;
 // }
 
-@import 'layout/index';
-@import 'layout/about';
 
 
 
-// 函式
 
-@mixin rect {
-    width: 200px;
-    height: 100px;
-    background-color: rgb(198, 198, 198);
-}
 
-@mixin botton-big {
-    width: 200px;
-    padding: 12px;
-}
 
-@mixin botton-default {
-    width: 180px;
-    padding: 10px;
-}
 
-// mixin 變數
-@mixin btn-test($w, $p) {
-    width: $w;
-    padding: $p;
-    background-color: #333;
-}
 
 
 .btn-w {
@@ -120,11 +107,11 @@ $vaule : 21;
 }
 
 .box2 {
-    @include rect
+    @include rects
 }
 
 .box3 {
-    @include rect
+    @include rects
 }
 
 
@@ -136,39 +123,11 @@ $vaule : 21;
     @include botton-default
 }
 
-@mixin rect($w , $h:null){
-  width: $w;
-  height: $h
-}
 
 .rect {
- @include rect(100px);
-} 
-
-@mixin borderR($r){
-  border-radius: $r
+    @include rect(100px);
 }
 
-
-
-
-
-@mixin btn( $class, $w, $p, $bgc) {
-    .btn-#{$class} { // 轉型
-        @include rect($w);
-        padding: $p;
-        background-color: $bgc;
-        text-align: center;
-        cursor: pointer;
-        @include borderR(12px);
-        transition: .2s all ease;
-        &:hover {
-            background-color: darken($bgc, 20);
-        }
-    }
-}
-
-
-    @include btn('error', 160px, 13px, rgb(245, 77, 68));
-    @include btn('success', 140px, 10px, rgb(93, 255, 225));
-    @include btn('info', 140px, 10px, rgb(93, 134, 255));
+@include btn('error', 160px, 13px, rgb(245, 77, 68));
+@include btn('success', 140px, 10px, rgb(93, 255, 225));
+@include btn('info', 140px, 10px, rgb(93, 134, 255));

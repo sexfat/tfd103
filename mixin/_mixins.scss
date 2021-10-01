@@ -1,0 +1,51 @@
+// mixin 變數
+@mixin btn-test($w, $p) {
+    width: $w;
+    padding: $p;
+    background-color: #333;
+}
+
+// 函式
+
+@mixin rects {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(198, 198, 198);
+}
+
+@mixin botton-big {
+    width: 200px;
+    padding: 12px;
+}
+
+@mixin botton-default {
+    width: 180px;
+    padding: 10px;
+}
+
+
+@mixin rect($w , $h:null){
+  width: $w;
+  height: $h
+}
+
+
+@mixin borderR($r){
+  border-radius: $r
+}
+
+
+@mixin btn( $class, $w, $p, $bgc) {
+    .btn-#{$class} { // 轉型
+        @include rect($w);
+        padding: $p;
+        background-color: $bgc;
+        text-align: center;
+        cursor: pointer;
+        @include borderR(12px);
+        transition: .2s all ease;
+        &:hover {
+            background-color: darken($bgc, 20);
+        }
+    }
+}
