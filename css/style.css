@@ -44,28 +44,32 @@ h1 {
   width: 120px;
   height: 30px;
 }
+
 .container nav .menu {
   list-style: none;
 }
+
 .container nav .menu li {
   background-color: #c4c4c4;
   padding: 10px;
   width: 150px;
 }
+
 .container nav .menu li:hover {
   background-color: #ff8585;
 }
+
 .container nav .menu li::before {
-  content: "before";
+  content: 'before';
   margin-right: 10px;
 }
+
 .container nav .menu li::after {
-  content: "after";
+  content: 'after';
   color: #1780ff;
 }
 
 .about_wrapper {
   width: 1200px;
 }
-
 /*# sourceMappingURL=style.css.map */
