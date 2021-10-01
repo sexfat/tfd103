@@ -101,13 +101,17 @@ h1 {
   padding: 10px;
 }
 
+.rect {
+  width: 100px;
+}
+
 .btn-error {
   width: 160px;
   padding: 13px;
   background-color: #f54d44;
   text-align: center;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: .2s all ease;
 }
 
@@ -121,7 +125,7 @@ h1 {
   background-color: #5dffe1;
   text-align: center;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: .2s all ease;
 }
 
@@ -135,7 +139,7 @@ h1 {
   background-color: #5d86ff;
   text-align: center;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: .2s all ease;
 }
 

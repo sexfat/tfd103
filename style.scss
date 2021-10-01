@@ -136,14 +136,31 @@ $vaule : 21;
     @include botton-default
 }
 
+@mixin rect($w , $h:null){
+  width: $w;
+  height: $h
+}
+
+.rect {
+ @include rect(100px);
+} 
+
+@mixin borderR($r){
+  border-radius: $r
+}
+
+
+
+
+
 @mixin btn( $class, $w, $p, $bgc) {
     .btn-#{$class} { // 轉型
-        width: $w;
+        @include rect($w);
         padding: $p;
         background-color: $bgc;
         text-align: center;
         cursor: pointer;
-        border-radius: 10px;
+        @include borderR(12px);
         transition: .2s all ease;
         &:hover {
             background-color: darken($bgc, 20);
