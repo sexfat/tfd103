@@ -113,6 +113,8 @@ h1 {
   cursor: pointer;
   border-radius: 12px;
   transition: .2s all ease;
+  border: 3px solid #6d0000;
+  color: #fff;
 }
 
 .btn-error:hover {
@@ -145,5 +147,11 @@ h1 {
 
 .btn-info:hover {
   background-color: #003ef6;
+}
+
+.box4 {
+  width: 100px;
+  height: 30px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

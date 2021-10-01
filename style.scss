@@ -128,6 +128,16 @@ $vaule : 21;
     @include rect(100px);
 }
 
-@include btn('error', 160px, 13px, rgb(245, 77, 68));
+@include btn('error', 160px, 13px, rgb(245, 77, 68)){
+   border: 3px solid rgb(109, 0, 0);
+   color: #fff;
+
+};
 @include btn('success', 140px, 10px, rgb(93, 255, 225));
 @include btn('info', 140px, 10px, rgb(93, 134, 255));
+
+
+.box4 {
+  @include rect(100px , 30px);
+  text-align: center;
+}

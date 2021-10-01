@@ -23,13 +23,14 @@
     padding: 10px;
 }
 
-
+// ====================
 @mixin rect($w , $h:null){
   width: $w;
-  height: $h
+  height: $h;
+  @content;
 }
 
-
+// ====================
 @mixin borderR($r){
   border-radius: $r
 }
@@ -44,6 +45,7 @@
         cursor: pointer;
         @include borderR(12px);
         transition: .2s all ease;
+        @content;
         &:hover {
             background-color: darken($bgc, 20);
         }
