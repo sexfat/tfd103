@@ -48,8 +48,20 @@ h1 {
   list-style: none;
 }
 .container nav .menu li {
-  padding: 0;
-  min-width: 100px;
+  background-color: #c4c4c4;
+  padding: 10px;
+  width: 150px;
+}
+.container nav .menu li:hover {
+  background-color: #ff8585;
+}
+.container nav .menu li::before {
+  content: "before";
+  margin-right: 10px;
+}
+.container nav .menu li::after {
+  content: "after";
+  color: #333;
 }
 
 /*# sourceMappingURL=style.css.map */
