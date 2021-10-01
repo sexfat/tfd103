@@ -141,3 +141,15 @@ $vaule : 21;
   @include rect(100px , 30px);
   text-align: center;
 }
+//迴圈
+@for $i from 1 through 200 {
+   .push-left#{$i} {
+     position: relative; 
+     left : $i * 1px;
+   }
+}
+
+
+
+
+
