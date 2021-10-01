@@ -258,28 +258,28 @@ h5 {
 .rect-primary {
   width: 200px;
   height: 30px;
-  background-color: #ff0d00;
+  background-color: #ffe2a9;
   margin-top: 10px;
 }
 
 .rect-secondary {
   width: 200px;
   height: 30px;
-  background-color: #ff8e04;
+  background-color: #ebff87;
   margin-top: 10px;
 }
 
 .rect-success {
   width: 200px;
   height: 30px;
-  background-color: #85daff;
+  background-color: #0638ff;
   margin-top: 10px;
 }
 
 .rect-info {
   width: 200px;
   height: 30px;
-  background-color: #cca8ff;
+  background-color: #ccfef2;
   margin-top: 10px;
 }
 
@@ -288,7 +288,7 @@ h5 {
   height: 240px;
   box-shadow: 1px 1px 10px #d8d8d8;
   border-radius: 10px;
-  background-color: #ff0d00;
+  background-color: #ffe2a9;
   display: inline-block;
 }
 
@@ -297,7 +297,7 @@ h5 {
   height: 240px;
   box-shadow: 1px 1px 10px #d8d8d8;
   border-radius: 10px;
-  background-color: #ff8e04;
+  background-color: #ebff87;
   display: inline-block;
 }
 
@@ -306,7 +306,7 @@ h5 {
   height: 240px;
   box-shadow: 1px 1px 10px #d8d8d8;
   border-radius: 10px;
-  background-color: #85daff;
+  background-color: #0638ff;
   display: inline-block;
 }
 
@@ -315,7 +315,25 @@ h5 {
   height: 240px;
   box-shadow: 1px 1px 10px #d8d8d8;
   border-radius: 10px;
-  background-color: #cca8ff;
+  background-color: #ccfef2;
   display: inline-block;
+}
+
+@media all and (max-width: 720px) {
+  .card_secondary {
+    background-color: #28b301;
+  }
+}
+
+@media all and (max-width: 720px) {
+  h1 {
+    font-size: 200px;
+  }
+}
+
+@media all and (min-width: 721px) {
+  h1 {
+    font-size: 100px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

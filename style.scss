@@ -166,7 +166,7 @@ $img : a1 a2 a3 b1 b2 b3 c1 c2 c3; // list
 @each $v in $img {
     .bg-#{$v} {
         background-image: url('./images/#{$v}.jpg');
-        @include rect (100% , 150px);
+        @include rect (100%, 150px);
         background-repeat: none;
         background-size: cover;
     }
@@ -183,55 +183,82 @@ $img : a1 a2 a3 b1 b2 b3 c1 c2 c3; // list
 // $dark:          $gray-900 !default;
 
 
-$head : (
-   'h1' : 50px,
-   'h2' : 40px,
-   'h3' : 30px,
-   'h4' : 20px,
-   'h5' : 12px,
-   '.small' : 10px,
-   '.head' : 60px
+$head : ('h1' : 50px,
+    'h2' : 40px,
+    'h3' : 30px,
+    'h4' : 20px,
+    'h5' : 12px,
+    '.small' : 10px,
+    '.head' : 60px);
+
+@each $t,
+$val in $head {
+    #{$t} {
+        font-size: $val;
+    }
+}
+
+$colorb : ('primary' : rgb(255, 226, 169),
+    'secondary' : rgb(235, 255, 135),
+    'success' : rgb(6, 56, 255),
+    'info' : rgb(204, 254, 242),
 );
 
-@each $t , $val in $head {
-  #{$t} {
-    font-size: $val;
-  }
-}
-
-$colorb : (
-   'primary' : rgb(255, 13, 0),
-   'secondary' : rgb(255, 142, 4),
-   'success' : rgb(133, 218, 255),
-   'info' : rgb(204, 168, 255),
-);
-
-@each $k , $v in $colorb {
-   .rect-#{$k} {
-     @include rect(200px , 30px);
-     background-color: $v;
-     margin-top: 10px;
-   } 
+@each $k,
+$v in $colorb {
+    .rect-#{$k} {
+        @include rect(200px, 30px);
+        background-color: $v;
+        margin-top: 10px;
+    }
 }
 
 
-@each $k , $v in $colorb {
-  
-  .card_#{$k} {
-    @include rect(300px , 240px);
-    box-shadow: 1px 1px 10px rgb(216, 216, 216);
-    @include borderR(10px);
-    background-color: $v;
-    display:  inline-block;
-  }
+@each $k,
+$v in $colorb {
 
+    .card_#{$k} {
+        @include rect(300px, 240px);
+        box-shadow: 1px 1px 10px rgb(216, 216, 216);
+        @include borderR(10px);
+        background-color: $v;
+        display: inline-block;
+    }
 }
 
 
 
 
+@mixin m() {
+    @media all and (max-width: 720px) {
+        @content;
+    }
+
+}
+
+@mixin d() {
+    @media all and (min-width: 721px) {
+        @content;
+    }
+}
 
 
+@include m() {
+    .card_secondary {
+        background-color: rgb(40, 179, 1);
+
+    }
+}
 
 
+@include m(){
+   h1 {
+   font-size: 200px;
+   }
+}
 
+@include d(){
+   h1 {
+   font-size: 100px;
+   }
+}
