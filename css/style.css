@@ -319,21 +319,31 @@ h5 {
   display: inline-block;
 }
 
-@media all and (max-width: 720px) {
+@media all and (max-width: 600px) {
   .card_secondary {
     background-color: #28b301;
   }
 }
 
-@media all and (max-width: 720px) {
+@media all and (max-width: 600px) {
   h1 {
     font-size: 200px;
   }
 }
 
-@media all and (min-width: 721px) {
+@media all and (min-width: 601px) {
   h1 {
     font-size: 100px;
+  }
+}
+
+body {
+  background-color: rgba(189, 189, 189, 0.966);
+}
+
+@media all and (max-width: 600px) {
+  body {
+    background-color: #f4ffa9;
   }
 }
 /*# sourceMappingURL=style.css.map */

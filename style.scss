@@ -226,39 +226,28 @@ $v in $colorb {
     }
 }
 
-
-
-
-@mixin m() {
-    @media all and (max-width: 720px) {
-        @content;
-    }
-
-}
-
-@mixin d() {
-    @media all and (min-width: 721px) {
-        @content;
-    }
-}
-
-
 @include m() {
     .card_secondary {
         background-color: rgb(40, 179, 1);
-
     }
 }
 
-
-@include m(){
-   h1 {
-   font-size: 200px;
-   }
+@include m() {
+    h1 {
+        font-size: 200px;
+    }
 }
 
-@include d(){
-   h1 {
-   font-size: 100px;
-   }
+@include d() {
+    h1 {
+        font-size: 100px;
+    }
+}
+
+body {
+    background-color: rgba(189, 189, 189, 0.966);
+    @include m() {
+        background-color: rgb(244, 255, 169);
+    }
+
 }

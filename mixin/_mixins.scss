@@ -51,3 +51,16 @@
         }
     }
 }
+
+@mixin m() {
+    @media all and (max-width: $m) {
+        @content;
+    }
+
+}
+
+@mixin d() {
+    @media all and (min-width: $d) {
+        @content;
+    }
+}
