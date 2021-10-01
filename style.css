@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* css 註解 */
+body {
+  margin: 10px 10px 10px 2px;
+  padding: 10px;
+  font-size: 20px;
+  color: #727272;
+  background-color: #fff;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */
