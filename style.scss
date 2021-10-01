@@ -86,3 +86,56 @@ $vaule : 21;
 
 @import 'layout/index';
 @import 'layout/about';
+
+
+
+// 函式
+
+@mixin rect {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(198, 198, 198);
+}
+
+@mixin botton-big {
+    width: 200px;
+    padding: 12px;
+}
+
+@mixin botton-default {
+    width: 180px;
+    padding: 10px;
+}
+
+// mixin 變數
+@mixin btn($w , $p) {
+    width: $w;
+    padding: $p;
+    background-color: #333;
+}
+
+
+.btn-w {
+    @include btn(190px , 13px);
+}
+
+
+
+
+
+.box2 {
+    @include rect
+}
+
+.box3 {
+    @include rect
+}
+
+
+.btn_big {
+    @include botton-big
+}
+
+.btn_medium {
+    @include botton-default
+}
