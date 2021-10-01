@@ -37,6 +37,19 @@ h1 {
   height: 8px;
   max-width: 200px;
   font: 0.5;
+  margin: 6;
+}
+
+.container .logo {
+  width: 120px;
+  height: 30px;
+}
+.container nav .menu {
+  list-style: none;
+}
+.container nav .menu li {
+  padding: 0;
+  min-width: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

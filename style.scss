@@ -86,5 +86,33 @@ $vaule : 21;
     width: 10px + 11px; // 加  
     height: 10px - 2; //減
     max-width: 10 * 20 + px;
-    font: (15px / 30px) // 除法
+    font: (15px / 30px); // 除法
+    margin: ceil(16 / 3) // floor  round  ceil
+}
+
+
+// Nesting
+
+// .wrapper nav ul {
+//     list-style: none;
+// }
+
+// .wrapper nav ul li {
+//    padding: 0;
+// }
+
+.container {
+    .logo {
+      width: 120px;
+     height:  30px;
+    }
+    nav {
+        .menu {
+          list-style: none;
+            li {
+              padding: 0;
+              min-width: 100px;
+            }
+        }
+    }
 }
