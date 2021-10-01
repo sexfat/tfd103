@@ -109,7 +109,6 @@ h1 {
   cursor: pointer;
   border-radius: 10px;
   transition: .2s all ease;
-  color: #fff;
 }
 
 .btn-error:hover {
@@ -117,17 +116,30 @@ h1 {
 }
 
 .btn-success {
-  width: 180px;
-  padding: 16px;
-  background-color: #5ef98f;
+  width: 140px;
+  padding: 10px;
+  background-color: #5dffe1;
   text-align: center;
   cursor: pointer;
   border-radius: 10px;
   transition: .2s all ease;
-  margin-top: 10px;
 }
 
 .btn-success:hover {
-  background-color: #09e84f;
+  background-color: #00f6c8;
+}
+
+.btn-info {
+  width: 140px;
+  padding: 10px;
+  background-color: #5d86ff;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: .2s all ease;
+}
+
+.btn-info:hover {
+  background-color: #003ef6;
 }
 /*# sourceMappingURL=style.css.map */

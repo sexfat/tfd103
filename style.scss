@@ -136,27 +136,22 @@ $vaule : 21;
     @include botton-default
 }
 
-@mixin btn($w, $p, $bgc) {
-    width: $w;
-    padding: $p;
-    background-color: $bgc;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: .2s all ease;
-    &:hover {
-        background-color: darken($bgc, 20);
+@mixin btn( $class, $w, $p, $bgc) {
+    .btn-#{$class} { // 轉型
+        width: $w;
+        padding: $p;
+        background-color: $bgc;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: .2s all ease;
+        &:hover {
+            background-color: darken($bgc, 20);
+        }
     }
 }
 
 
-
-.btn-error {
-    @include btn(160px, 13px, rgb(245, 77, 68));
-    color:#fff 
-}
-
-.btn-success {
-    @include btn(180px, 16px, rgb(94, 249, 143));
-    margin-top: 10px;
-}
+    @include btn('error', 160px, 13px, rgb(245, 77, 68));
+    @include btn('success', 140px, 10px, rgb(93, 255, 225));
+    @include btn('info', 140px, 10px, rgb(93, 134, 255));
