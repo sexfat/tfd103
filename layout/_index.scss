@@ -1,0 +1,36 @@
+//首頁
+
+.container {
+    .logo {
+      width: 120px;
+      height:  30px;
+    }
+    nav {
+        .menu {
+          list-style: none;
+            li {
+              background-color: rgb(196, 196, 196);
+              padding: 10px;
+              width: 150px;
+              &:hover {
+                 background-color: rgb(255, 133, 133);
+              }
+              &::before {
+                 content: 'before';
+                 margin-right: 10px;
+              }
+              &::after {
+                 content: 'after';
+                 color : rgb(23, 128, 255)
+              
+              }
+            }
+            
+            //css
+            // li:hover {
+            //   background-color: #f20;
+            // }
+            
+        }
+    }
+}
