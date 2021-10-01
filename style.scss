@@ -207,13 +207,23 @@ $colorb : (
 );
 
 @each $k , $v in $colorb {
-
    .rect-#{$k} {
      @include rect(200px , 30px);
      background-color: $v;
      margin-top: 10px;
    } 
+}
 
+
+@each $k , $v in $colorb {
+  
+  .card_#{$k} {
+    @include rect(300px , 240px);
+    box-shadow: 1px 1px 10px rgb(216, 216, 216);
+    @include borderR(10px);
+    background-color: $v;
+    display:  inline-block;
+  }
 
 }
 
