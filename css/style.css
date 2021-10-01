@@ -100,4 +100,34 @@ h1 {
   width: 180px;
   padding: 10px;
 }
+
+.btn-error {
+  width: 160px;
+  padding: 13px;
+  background-color: #f54d44;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: .2s all ease;
+  color: #fff;
+}
+
+.btn-error:hover {
+  background-color: #c8140b;
+}
+
+.btn-success {
+  width: 180px;
+  padding: 16px;
+  background-color: #5ef98f;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: .2s all ease;
+  margin-top: 10px;
+}
+
+.btn-success:hover {
+  background-color: #09e84f;
+}
 /*# sourceMappingURL=style.css.map */
