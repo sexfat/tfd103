@@ -28,4 +28,15 @@ h5 {
   font-size: 12px;
 }
 
+h1 {
+  margin: 0px;
+}
+
+.box {
+  width: 21px;
+  height: 8px;
+  max-width: 200px;
+  font: 0.5;
+}
+
 /*# sourceMappingURL=style.css.map */
