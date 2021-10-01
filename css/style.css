@@ -226,4 +226,60 @@ h1 {
   background-repeat: none;
   background-size: cover;
 }
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+.small {
+  font-size: 10px;
+}
+
+.head {
+  font-size: 60px;
+}
+
+.rect-primary {
+  width: 200px;
+  height: 30px;
+  background-color: #ff0d00;
+  margin-top: 10px;
+}
+
+.rect-secondary {
+  width: 200px;
+  height: 30px;
+  background-color: #ff8e04;
+  margin-top: 10px;
+}
+
+.rect-success {
+  width: 200px;
+  height: 30px;
+  background-color: #85daff;
+  margin-top: 10px;
+}
+
+.rect-info {
+  width: 200px;
+  height: 30px;
+  background-color: #cca8ff;
+  margin-top: 10px;
+}
 /*# sourceMappingURL=style.css.map */

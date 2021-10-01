@@ -159,7 +159,7 @@ $vaule : 21;
 // @include push(200, left);
 // @include push(200, top);
 
-// each
+// each 迴圈
 
 $img : a1 a2 a3 b1 b2 b3 c1 c2 c3; // list
 
@@ -169,6 +169,59 @@ $img : a1 a2 a3 b1 b2 b3 c1 c2 c3; // list
         @include rect (100% , 150px);
         background-repeat: none;
         background-size: cover;
-
     }
 }
+
+
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-900 !default;
+
+
+$head : (
+   'h1' : 50px,
+   'h2' : 40px,
+   'h3' : 30px,
+   'h4' : 20px,
+   'h5' : 12px,
+   '.small' : 10px,
+   '.head' : 60px
+);
+
+@each $t , $val in $head {
+  #{$t} {
+    font-size: $val;
+  }
+}
+
+$colorb : (
+   'primary' : rgb(255, 13, 0),
+   'secondary' : rgb(255, 142, 4),
+   'success' : rgb(133, 218, 255),
+   'info' : rgb(204, 168, 255),
+);
+
+@each $k , $v in $colorb {
+
+   .rect-#{$k} {
+     @include rect(200px , 30px);
+     background-color: $v;
+     margin-top: 10px;
+   } 
+
+
+}
+
+
+
+
+
+
+
+
+
