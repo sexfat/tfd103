@@ -1,3 +1,32 @@
+.notosans100 {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 100;
+}
+
+.notosans900 {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+}
+
 .notosans {
     font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
 }
+
+
+$notosans :(
+'notosans' :  400,
+'notosans100' :  100,
+'notosans300' :  300,
+'notosans500' :  500,
+'notosans900' :  900,
+);
+
+@each $k, $v in $notosans {
+    .#{$k} {
+        font-family: 'Noto Sans TC', sans-serif;
+        font-weight: $v;
+    }
+}
+
+
