@@ -368,8 +368,12 @@ body {
   }
 }
 
-.red, .text {
+.red {
   color: red;
+}
+
+.text {
+  color: yellow;
 }
 
 .green, .textbox {
@@ -385,5 +389,29 @@ body {
   width: 400px;
   height: 300px;
   background-color: #cbfffc;
+}
+
+.marginAuto, .layout {
+  margin: 0 auto;
+}
+
+.layout .boxs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.layout {
+  width: 1200px;
+  height: 400px;
+  background-color: #5d86ff;
+  position: relative;
+}
+
+.layout .boxs {
+  width: 200px;
+  height: 150px;
+  background-color: #ccfe9b;
 }
 /*# sourceMappingURL=style.css.map */

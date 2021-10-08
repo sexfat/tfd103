@@ -260,6 +260,10 @@ body {
    color : red
 }
 
+%yellow {
+  color: yellow;
+}
+
 .green {
   color :rgb(40, 179, 1)
 }
@@ -272,16 +276,51 @@ body {
 .text {
    font-size: 20px;
    font-weight: 900;
-   @extend .red;
-
-   
-  //@include red();
+    @extend %yellow;
 }
-
 .textbox {
   @include rect(400px , 300px);
   background-color: rgb(203, 255, 252);
-//   @extend .red;
   @extend .green;
-// @include red();
+
 }
+// layout
+
+// 置中
+.marginAuto {
+   margin: 0 auto;
+}
+// 父層設定
+%flexcenter {
+  display:  flex ;
+  justify-content: center;
+  align-items: center;
+}
+
+// 內層元素設定
+%abscenter {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%  , -50%)
+}
+
+
+.layout {
+   @include rect(1200px , 400px);
+   @extend .marginAuto;
+   background-color: rgb(93, 134, 255);
+   position: relative;
+
+//    @extend %flexcenter;
+   .boxs {
+     @include rect(200px, 150px);
+     background-color: rgb(204, 254, 155);
+     @extend %abscenter ;
+   }
+
+}
+
+
+
+
