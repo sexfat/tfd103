@@ -1,43 +1,24 @@
 @charset "UTF-8";
 /* css 註解 */
-.notosans100 {
-  font-family: 'Noto Sans TC', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;400;700&display=swap");
+.NotoSerif100 {
+  font-family: "'Noto Serif TC', serif;', sans-serif";
   font-weight: 100;
 }
 
-.notosans900 {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 900;
+.NotoSerif200 {
+  font-family: "'Noto Serif TC', serif;', sans-serif";
+  font-weight: 200;
 }
 
-.notosans, .text, .textbox {
-  font-family: 'Noto Sans TC', sans-serif;
+.NotoSerif {
+  font-family: "'Noto Serif TC', serif;', sans-serif";
   font-weight: 400;
 }
 
-.notosans, .text, .textbox {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 400;
-}
-
-.notosans100 {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 100;
-}
-
-.notosans300 {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 300;
-}
-
-.notosans500 {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 500;
-}
-
-.notosans900 {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 900;
+.NotoSerif700 {
+  font-family: "'Noto Serif TC', serif;', sans-serif";
+  font-weight: 700;
 }
 
 .container .logo {

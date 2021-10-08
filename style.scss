@@ -273,7 +273,7 @@ body {
    font-size: 20px;
    font-weight: 900;
    @extend .red;
-   @extend .notosans;
+
    
   //@include red();
 }
@@ -283,6 +283,5 @@ body {
   background-color: rgb(203, 255, 252);
 //   @extend .red;
   @extend .green;
-  @extend .notosans;
 // @include red();
 }
