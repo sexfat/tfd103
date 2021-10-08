@@ -2,13 +2,44 @@
 // var
 @import 'base/var';
 @import 'base/font';
+@import 'base/common';
 
 // mixin
 @import 'mixin/mixins';
 
+
+//plugin
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/owl.carousel/src/scss/owl.carousel.scss';
+
+
+// module
+@import './modules/btn';
+@import './modules/card';
+
+
 // layout
-@import 'layout/index';
-@import 'layout/about';
+@import './layout/header'; 
+@import './layout/footer'; 
+@import './layout/login'; 
+@import './layout/nav'; 
+@import './layout/cart';
+
+
+// page
+@import 'page/index';
+@import 'page/about';
+@import 'page/product';
+
+
+
+
+
+
+
+
+
 
 
 
@@ -289,24 +320,7 @@ body {
 // layout
 
 // 置中
-.marginAuto {
-    margin: 0 auto;
-}
 
-// 父層設定
-%flexcenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-// 內層元素設定
-%abscenter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%)
-}
 
 
 .layout {
@@ -324,17 +338,7 @@ body {
 }
 
 
-@mixin layout($w) {
-    @if $w==100 {
-        width: 100%;
-        display: block;
-    }
 
-    @else {
-        width: $w;
-        @extend .marginAuto;
-    }
-}
 
 //固定寬
 .wrapperfix {
@@ -380,3 +384,6 @@ body {
 .graypink {
     background-color: rgb(171, 136, 136);
 }
+
+$aa : 10px;
+$aa : 20px ;

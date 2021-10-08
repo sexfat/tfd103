@@ -1,0 +1,18 @@
+.marginAuto {
+    margin: 0 auto;
+}
+
+// 父層設定
+%flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// 內層元素設定
+%abscenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}

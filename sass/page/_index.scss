@@ -1,6 +1,7 @@
 //首頁
 
 .container {
+  @include layout(100);
     .logo {
       width: 120px;
       height:  30px;

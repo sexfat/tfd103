@@ -64,3 +64,17 @@
         @content;
     }
 }
+
+
+// layout
+@mixin layout($w) {
+    @if $w==100 {
+        width: 100%;
+        display: block;
+    }
+
+    @else {
+        width: $w;
+        @extend .marginAuto;
+    }
+}
