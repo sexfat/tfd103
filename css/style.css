@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* css 註解 */
+.notosans, .text, .textbox {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
 .container .logo {
   width: 120px;
   height: 30px;
@@ -345,5 +349,24 @@ body {
   body {
     background-color: #f4ffa9;
   }
+}
+
+.red, .text {
+  color: red;
+}
+
+.green, .textbox {
+  color: #28b301;
+}
+
+.text {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.textbox {
+  width: 400px;
+  height: 300px;
+  background-color: #cbfffc;
 }
 /*# sourceMappingURL=style.css.map */

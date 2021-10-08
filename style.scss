@@ -1,6 +1,7 @@
 /* css 註解 */
 // var
 @import 'base/var';
+@import 'base/font';
 
 // mixin
 @import 'mixin/mixins';
@@ -250,4 +251,38 @@ body {
         background-color: rgb(244, 255, 169);
     }
 
+}
+
+
+
+
+.red {
+   color : red
+}
+
+.green {
+  color :rgb(40, 179, 1)
+}
+
+@mixin red() {
+  color: red;
+}
+
+
+.text {
+   font-size: 20px;
+   font-weight: 900;
+   @extend .red;
+   @extend .notosans;
+   
+  //@include red();
+}
+
+.textbox {
+  @include rect(400px , 300px);
+  background-color: rgb(203, 255, 252);
+//   @extend .red;
+  @extend .green;
+  @extend .notosans;
+// @include red();
 }
