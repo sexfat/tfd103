@@ -124,10 +124,12 @@ h1 {
 
 .rect {
   width: 100px;
+  height: 100px;
 }
 
 .btn-error {
   width: 160px;
+  height: 160px;
   padding: 13px;
   background-color: #f54d44;
   text-align: center;
@@ -144,6 +146,7 @@ h1 {
 
 .btn-success {
   width: 140px;
+  height: 140px;
   padding: 10px;
   background-color: #5dffe1;
   text-align: center;
@@ -158,6 +161,7 @@ h1 {
 
 .btn-info {
   width: 140px;
+  height: 140px;
   padding: 10px;
   background-color: #5d86ff;
   text-align: center;
@@ -411,7 +415,7 @@ body {
 
 .layout .boxs {
   width: 200px;
-  height: 150px;
+  height: 100px;
   background-color: #ccfe9b;
 }
 /*# sourceMappingURL=style.css.map */

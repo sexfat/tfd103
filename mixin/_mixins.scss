@@ -24,7 +24,7 @@
 }
 
 // ====================
-@mixin rect($w , $h:null){
+@mixin rect($w , $h:$w){
   width: $w;
   height: $h;
   @content;

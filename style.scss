@@ -314,7 +314,7 @@ body {
 
 //    @extend %flexcenter;
    .boxs {
-     @include rect(200px, 150px);
+     @include rect(200px , 100px);
      background-color: rgb(204, 254, 155);
      @extend %abscenter ;
    }
