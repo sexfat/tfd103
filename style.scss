@@ -353,24 +353,28 @@ body {
 
 // grid system
 // 1 / 12
-@mixin grids($num) {
+@mixin grids($device, $num) {
     @for $i from 1 through $num {
-        .col-#{$i} {
+        .col-#{$device}-#{$i} {
             width: ($i / $num) * 100%;
+            &:nth-child(odd) {
+              background-color: rgb(255, 217, 217);
+            }
             @content;
-            background-color: rgb(255, 223, 223);
         }
     }
 }
 
-@include grids(10){
-  display: inline-block;
-  height: 300px;
-};
+@include d() {
+    @include grids('md', 12);
+}
+
+@include m() {
+    @include grids('xs', 12);
+}
+
 
 
 .graypink {
-
- background-color: rgb(171, 136, 136);
-
+    background-color: rgb(171, 136, 136);
 }
