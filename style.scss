@@ -246,6 +246,7 @@ $v in $colorb {
 
 body {
     background-color: rgba(189, 189, 189, 0.966);
+
     @include m() {
         background-color: rgb(244, 255, 169);
     }
@@ -256,97 +257,120 @@ body {
 
 
 .red {
-   color : red
+    color: red
 }
 
 %yellow {
-  color: yellow;
+    color: yellow;
 }
 
 .green {
-  color :rgb(40, 179, 1)
+    color: rgb(40, 179, 1)
 }
 
 @mixin red() {
-  color: red;
+    color: red;
 }
 
 
 .text {
-   font-size: 20px;
-   font-weight: 900;
+    font-size: 20px;
+    font-weight: 900;
     @extend %yellow;
 }
+
 .textbox {
-  @include rect(400px , 300px);
-  background-color: rgb(203, 255, 252);
-  @extend .green;
+    @include rect(400px, 300px);
+    background-color: rgb(203, 255, 252);
+    @extend .green;
 
 }
+
 // layout
 
 // 置中
 .marginAuto {
-   margin: 0 auto;
+    margin: 0 auto;
 }
+
 // 父層設定
 %flexcenter {
-  display:  flex ;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 // 內層元素設定
 %abscenter {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%  , -50%)
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
 }
 
 
 .layout {
-   @include rect(1200px , 400px);
-   @extend .marginAuto;
-   background-color: rgb(93, 134, 255);
-   position: relative;
+    @include rect(1200px, 400px);
+    @extend .marginAuto;
+    background-color: rgb(93, 134, 255);
+    position: relative;
 
-//    @extend %flexcenter;
-   .boxs {
-     @include rect(200px , 100px);
-     background-color: rgb(204, 254, 155);
-     @extend %abscenter ;
-   }
+    //    @extend %flexcenter;
+    .boxs {
+        @include rect(200px, 100px);
+        background-color: rgb(204, 254, 155);
+        @extend %abscenter;
+    }
 }
 
 
-@mixin layout($w){
-  @if $w == 100 {
-    width: 100%;
-    display: block;
-  }@else{
-    width: $w;
-    @extend .marginAuto;
-  }
+@mixin layout($w) {
+    @if $w==100 {
+        width: 100%;
+        display: block;
+    }
+
+    @else {
+        width: $w;
+        @extend .marginAuto;
+    }
 }
 
 //固定寬
 .wrapperfix {
-  @include layout(1366px);
-  background-color: salmon;
-  height: 300px;
+    @include layout(1366px);
+    background-color: salmon;
+    height: 300px;
 }
 
 // 滿版
 .wrapperfull {
- @include layout(100);
- background-color: sandybrown;
- height: 300px;
+    @include layout(100);
+    background-color: sandybrown;
+    height: 300px;
+    display: flex;
 }
 
+// grid system
+// 1 / 12
+@mixin grids($num) {
+    @for $i from 1 through $num {
+        .col-#{$i} {
+            width: ($i / $num) * 100%;
+            @content;
+            background-color: rgb(255, 223, 223);
+        }
+    }
+}
+
+@include grids(10){
+  display: inline-block;
+  height: 300px;
+};
 
 
+.graypink {
 
+ background-color: rgb(171, 136, 136);
 
-
-
+}
