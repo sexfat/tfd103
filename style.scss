@@ -332,7 +332,7 @@ body {
 
 //固定寬
 .wrapperfix {
-  @include layout(1200px);
+  @include layout(1366px);
   background-color: salmon;
   height: 300px;
 }
