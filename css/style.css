@@ -56,7 +56,6 @@
 
 body {
   margin: 10px 10px 10px 2px;
-  padding: 10px;
   font-size: 20px;
   color: #727272;
   background-color: #fff;
@@ -395,7 +394,7 @@ body {
   background-color: #cbfffc;
 }
 
-.marginAuto, .layout {
+.marginAuto, .layout, .wrapperfix {
   margin: 0 auto;
 }
 
@@ -417,5 +416,18 @@ body {
   width: 200px;
   height: 100px;
   background-color: #ccfe9b;
+}
+
+.wrapperfix {
+  width: 1200px;
+  background-color: salmon;
+  height: 300px;
+}
+
+.wrapperfull {
+  width: 100%;
+  display: block;
+  background-color: sandybrown;
+  height: 300px;
 }
 /*# sourceMappingURL=style.css.map */

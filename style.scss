@@ -14,7 +14,6 @@
 
 body {
     margin: $margin;
-    padding: 10px;
     font-size: $fontsize;
     color: $fontColor;
     border: $null;
@@ -318,8 +317,35 @@ body {
      background-color: rgb(204, 254, 155);
      @extend %abscenter ;
    }
-
 }
+
+
+@mixin layout($w){
+  @if $w == 100 {
+    width: 100%;
+    display: block;
+  }@else{
+    width: $w;
+    @extend .marginAuto;
+  }
+}
+
+//固定寬
+.wrapperfix {
+  @include layout(1200px);
+  background-color: salmon;
+  height: 300px;
+}
+
+// 滿版
+.wrapperfull {
+ @include layout(100);
+ background-color: sandybrown;
+ height: 300px;
+}
+
+
+
 
 
 
