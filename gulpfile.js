@@ -56,6 +56,24 @@ function minicss(){
 
 exports.csscompress = minicss ; 
 
+// sass
+const sass = require('gulp-sass')(require('sass'));
+
+function sassstyle(){
+  return src('./sass/*.scss')
+  .pipe(sass().on('error', sass.logError)) //sass
+  .pipe(cleanCSS()) // minicss
+  .pipe(dest('dist/css'));
+}
+
+//exports.scss = sassstyle
+
+function watchstyle(){
+  watch('sass/*.scss' , sassstyle)
+}
+
+exports.w = watchstyle
+
 
 
 
