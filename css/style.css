@@ -32,6 +32,14 @@
   transform: translate(-50%, -50%);
 }
 
+.borderR, .layout .boxs {
+  border-radius: 10px;
+}
+
+.wrapper {
+  width: 100%;
+}
+
 /*!
  * Bootstrap v5.1.2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10910,42 +10918,12 @@ fieldset:disabled .btn {
   width: 100%;
 }
 
-.container {
-  width: 100%;
-  display: block;
+.index h1, .index .h1 {
+  font-size: 23px;
 }
 
-.container .logo {
-  width: 120px;
-  height: 30px;
-}
-
-.container nav .menu {
-  list-style: none;
-}
-
-.container nav .menu li {
-  background-color: #c4c4c4;
-  padding: 10px;
-  width: 150px;
-}
-
-.container nav .menu li:hover {
-  background-color: #ff8585;
-}
-
-.container nav .menu li::before {
-  content: 'before';
-  margin-right: 10px;
-}
-
-.container nav .menu li::after {
-  content: 'after';
-  color: #1780ff;
-}
-
-.about_wrapper {
-  width: 1200px;
+.about h1, .about .h1 {
+  font-size: 20px;
 }
 
 body {
