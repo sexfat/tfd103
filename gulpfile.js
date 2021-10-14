@@ -40,12 +40,16 @@ exports.html = function htmls(){
   return src(['./**/*.html' , './*.html', '!about.html']).pipe(dest('dist'))
 }
 
-// 壓縮css 
+// 壓縮css  改名
+const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
 
 function minicss(){
   return src('style.css')
-  .pipe(cleanCSS({compatibility: 'ie10'})) // minicss 
+  .pipe(cleanCSS()) // minicss
+  .pipe(rename({
+      extname: '.min.css'
+    })) 
   .pipe(dest('dist'))
 }
 
