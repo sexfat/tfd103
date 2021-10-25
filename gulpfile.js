@@ -124,7 +124,7 @@ function browser(done) {
   done();
 }
 
-exports.b = browser;
+exports.default = browser;
 
 
 
