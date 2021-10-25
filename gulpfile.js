@@ -60,6 +60,7 @@ exports.csscompress = minicss ;
 // sass
 const sass = require('gulp-sass')(require('sass'));
 
+// 開發用
 function sassstyle(){
   return src('./sass/*.scss')
   .pipe(sourcemaps.init())
@@ -68,7 +69,7 @@ function sassstyle(){
   .pipe(sourcemaps.write())
   .pipe(dest('dist/css'));
 }
-
+//上線用sass
 function sassonline(){
   return src('./sass/*.scss')
   .pipe(sass().on('error', sass.logError)) //sass
@@ -87,6 +88,18 @@ function watchstyle(){
 exports.w = watchstyle
 
 exports.p = sassonline
+
+//html 樣板
+const fileinclude = require('gulp-file-include');
+
+exports.html =  function includeHTML() {
+    return src('*.html')
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(dest('./dist'));
+}
 
 
 
