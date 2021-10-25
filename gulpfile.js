@@ -43,6 +43,7 @@ exports.html = function htmls(){
 // 壓縮css  改名
 const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
+const sourcemaps = require('gulp-sourcemaps');
 
 function minicss(){
   return src('style.css')
@@ -61,18 +62,33 @@ const sass = require('gulp-sass')(require('sass'));
 
 function sassstyle(){
   return src('./sass/*.scss')
+  .pipe(sourcemaps.init())
+  .pipe(sass().on('error', sass.logError)) //sass
+  .pipe(cleanCSS()) // minicss
+  .pipe(sourcemaps.write())
+  .pipe(dest('dist/css'));
+}
+
+function sassonline(){
+  return src('./sass/*.scss')
   .pipe(sass().on('error', sass.logError)) //sass
   .pipe(cleanCSS()) // minicss
   .pipe(dest('dist/css'));
 }
 
+
+
 //exports.scss = sassstyle
 
 function watchstyle(){
-  watch('sass/*.scss' , sassstyle)
+  watch(['sass/*.scss', 'sass/**/*.scss' ], sassstyle)
 }
 
 exports.w = watchstyle
+
+exports.p = sassonline
+
+
 
 
 
