@@ -81,18 +81,12 @@ function sassonline(){
 
 //exports.scss = sassstyle
 
-function watchstyle(){
-  watch(['sass/*.scss', 'sass/**/*.scss' ], sassstyle)
-}
 
-exports.w = watchstyle
-
-exports.p = sassonline
 
 //html 樣板
 const fileinclude = require('gulp-file-include');
 
-exports.html =  function includeHTML() {
+function includeHTML() {
     return src('*.html')
         .pipe(fileinclude({
             prefix: '@@',
@@ -100,6 +94,16 @@ exports.html =  function includeHTML() {
         }))
         .pipe(dest('./dist'));
 }
+
+
+function watchall(){
+  watch(['sass/*.scss', 'sass/**/*.scss' ], sassstyle)
+  watch(['*.html', 'layout/*.html'], includeHTML)
+}
+
+exports.w = watchall
+
+exports.p = sassonline
 
 
 
