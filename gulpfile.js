@@ -119,8 +119,8 @@ function browser(done) {
     },
     port: 3000
   });
-  watch(['sass/*.scss', 'sass/**/*.scss'] , sassstyle);
-  watch(['*.html', 'layout/*.html'], includeHTML);
+  watch(['sass/*.scss', 'sass/**/*.scss'] , sassstyle).on('change' , reload);
+  watch(['*.html', 'layout/*.html'], includeHTML).on('change' , reload);
   done();
 }
 
