@@ -100,10 +100,24 @@ function watchall() {
   watch(['sass/*.scss', 'sass/**/*.scss'], sassstyle)
   watch(['*.html', 'layout/*.html'], includeHTML)
 }
+// 壓圖
+const imagemin = require('gulp-imagemin');
 
-exports.w = watchall
 
-exports.p = sassonline
+function min_images(){
+    return src('images/*.*')
+    .pipe(imagemin([
+        imagemin.mozjpeg({quality: 70, progressive: true}) // 壓縮品質      quality越低 -> 壓縮越大 -> 品質越差 
+    ]))
+    .pipe(dest('dist/images'))
+}
+
+
+exports.mg = min_images;
+
+
+
+
 
 
 const browserSync = require('browser-sync');
