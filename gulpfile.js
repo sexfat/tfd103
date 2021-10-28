@@ -230,6 +230,9 @@ function clear() {
   .pipe(clean({force: true})); //強制刪除檔案 
 }
 
+
+// 清除舊檔案 -> html sass js ->壓縮圖片
+
 exports.production = series(clear , parallel(includeHTML , sassonline  , babel5) ,min_images)
 
 
