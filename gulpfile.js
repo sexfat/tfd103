@@ -79,6 +79,18 @@ function sassonline() {
 
 
 
+//css3 跨瀏覽器使用 
+const autoprefixer = require('gulp-autoprefixer');
+exports.prefixer = () => (
+     src('./dist/css/*.css')
+        .pipe(autoprefixer({
+            cascade: false
+        }))
+        .pipe(dest('./dist/css/prefixer/'))
+);
+
+
+
 //exports.scss = sassstyle
 
 
@@ -102,8 +114,6 @@ function watchall() {
 }
 // 壓圖
 const imagemin = require('gulp-imagemin');
-
-
 function min_images(){
     return src('images/*.*')
     .pipe(imagemin([
@@ -116,8 +126,17 @@ function min_images(){
 exports.mg = min_images;
 
 
+//js es6 ->es5
+const babel = require('gulp-babel');
 
-
+function babel5() {
+    return src('js/*.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(dest('dist/js'));
+}
+exports.js = babel5
 
 
 const browserSync = require('browser-sync');
@@ -139,6 +158,18 @@ function browser(done) {
 }
 
 exports.default = browser;
+
+
+
+const clean = require('gulp-clean');
+
+function clear() {
+  return src('dist' ,{ read: false ,allowEmpty: true })
+  //不去讀檔案結構，增加刪除效率  / allowEmpty : 允許刪除空的檔案
+  .pipe(clean({force: true})); //強制刪除檔案 
+}
+
+exports.cls = clear;
 
 
 
