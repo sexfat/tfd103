@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "開發用": "gulp w",
-    "上線用": "gulp p"
+    "開發用": "gulp",
+    "上線用": "gulp production"
   },
   "repository": {
     "type": "git",
