@@ -5,8 +5,6 @@ module.exports = {
     // app = chunk name = id 
     entry: {
         vendor: './vendor.js', // 套件
-        pageone : './app.js', // 自己開發應用js
-        pagetwo : './app2.js',
         style : './style.js' // css
     },               // 入口文件
     output: {
@@ -32,7 +30,7 @@ module.exports = {
     },              // 處裡對應模組
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "[name].css"
+            filename: "css/[name].css" 
         })
     ],             // 對應的插件
     // devServer: {},           // 服務器配置
