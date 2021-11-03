@@ -41,7 +41,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             chunks : ['index'],  //選擇注入資源 chunk
-            inject  : 'head', //預設<body> js </body>  head or body
+            inject  : 'body', //預設<body> js </body>  head or body
             template : './src/index.html',
             //來源
             filename : 'index.html'
@@ -56,6 +56,13 @@ module.exports = {
             // 目的地
         })
     ],             // 對應的插件
-    // devServer: {},           // 服務器配置
+    devServer: {
+        contentBase: './dist',
+        host: 'localhost',
+        port: 3000,
+        // 指定首頁檔案
+        index: 'index.html',
+        open: true
+    },         // 服務器配置
     //mode: 'production'      // 開發模式配置 production /development
 }

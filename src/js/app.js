@@ -3,7 +3,7 @@ import '../sass/style.scss';
 
 gsap.to('.box' ,{
    duration : 2,
-   x: 300,
+   x: 700,
    y : 300,
    rotation : 360,
    repeat : 3
