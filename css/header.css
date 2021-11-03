@@ -1,0 +1,7 @@
+header {
+  width:  100%;
+  background-color: rgb(171, 219, 255);
+  height:  100px;
+  padding: 10px;
+  box-sizing: border-box;
+}
