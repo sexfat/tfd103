@@ -1,8 +1,4 @@
-import $ from 'jquery';
 import { gsap } from "gsap";
-
-$('body').css('background-color' , '#eee');
-
 
 gsap.to('.box' ,{
    duration : 2,
@@ -14,5 +10,5 @@ gsap.to('.box' ,{
 
 
 
-console.log('webpack 打包');
+console.log('webpack app1');
 
