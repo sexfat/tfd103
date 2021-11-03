@@ -1,5 +1,5 @@
 import { gsap } from "gsap";
-import '../css/style.css';
+import '../sass/style.scss';
 
 gsap.to('.box' ,{
    duration : 2,
