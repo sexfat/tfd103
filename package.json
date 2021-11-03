@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/sexfat/tfd103#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^5.2.4",
     "mini-css-extract-plugin": "^1.6.0",
     "node-sass": "^5.0.0",

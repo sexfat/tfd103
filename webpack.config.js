@@ -1,10 +1,13 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const {
+    CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 
 module.exports = {
     // app = chunk name = id 
     entry: {
-        app1: './src/js/app.js', // index
+        index: './src/js/app.js', // index
         app2 : './src/js/app2.js' // about
     },               // 入口文件
     output: {
@@ -30,6 +33,7 @@ module.exports = {
 
     },              // 處裡對應模組
     plugins: [
+        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: "css/[name].css" 
         })
