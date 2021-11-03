@@ -3,8 +3,8 @@ const path = require('path');
 module.exports = {
     // app = chunk name = id 
     entry: {
-        vendor: './vendor.js',
-        pageone : './app.js',
+        vendor: './vendor.js', // 套件
+        pageone : './app.js', // 自己開發應用js
         pagetwo : './app2.js'
     },               // 入口文件
     output: {
