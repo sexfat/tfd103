@@ -4,12 +4,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     // app = chunk name = id 
     entry: {
-        vendor: './vendor.js', // 套件
-        style : './style.js' // css
+        app1: './src/js/app.js', // index
+        app2 : './src/js/app2.js' // about
     },               // 入口文件
     output: {
        path: path.resolve(__dirname, 'dist'),
-       filename: '[name].js'
+       filename: 'js/[name].js'
     },              // 出口文件
    module: {
         rules: [{
