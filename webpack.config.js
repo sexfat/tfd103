@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
+const webpack  = require('webpack');
 
 module.exports = {
     // app = chunk name = id 
@@ -69,7 +70,11 @@ module.exports = {
             //來源
             filename : 'about.html'
             // 目的地
-        })
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+          })
     ],             // 對應的插件
     devServer: {
         contentBase: './dist',

@@ -8,7 +8,7 @@ gsap.to('.box' ,{
    rotation : 360,
    repeat : 3
 })
-
+$('body').css('background-color' , 'red');
 
 
 console.log('webpack app1');
