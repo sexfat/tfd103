@@ -6,7 +6,7 @@ $('body').css('background-color' , '#eee');
 
 gsap.to('.box' ,{
    duration : 2,
-   x: 600,
+   x: 300,
    y : 300,
    rotation : 360,
    repeat : 3
