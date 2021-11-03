@@ -26,6 +26,7 @@
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^5.2.4",
+    "html-webpack-partials-plugin": "^0.8.0",
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^1.6.0",
     "node-sass": "^5.0.0",

@@ -5,6 +5,7 @@ const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
 const webpack  = require('webpack');
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 
 module.exports = {
     // app = chunk name = id 
@@ -63,19 +64,23 @@ module.exports = {
             filename : 'index.html'
             // 目的地
         }),
-         new HtmlWebpackPlugin({
-            chunks : ['app2'],  //選擇注入資源 chunk
-            inject  : 'head', //預設<body> js </body>  head or body
-            template : './src/about.html',
-            //來源
-            filename : 'about.html'
-            // 目的地
-        }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
-          })
-    ],             // 對應的插件
+          }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/layout/nav.html'),
+            location: 'header',
+            template_filename: ['index.html']
+        })  
+    ],// 對應的插件
+    
+    resolve: {
+    //解決 vue 路徑問題
+     alias: {
+           vue: 'vue/dist/vue.js'
+        }
+      },  
     devServer: {
         contentBase: './dist',
         host: 'localhost',
