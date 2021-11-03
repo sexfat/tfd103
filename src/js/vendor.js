@@ -1,4 +1,4 @@
-// import $ from 'jquery';
+import $ from 'jquery';
 import { gsap } from "gsap";
 // import Vue from 'vue'
  gsap.to('h1' , {
