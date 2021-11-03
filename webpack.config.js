@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    // app = chunk name = id 
     entry: {app : './app.js'},               // 入口文件
     output: {
        path: path.resolve(__dirname, 'dist'),
